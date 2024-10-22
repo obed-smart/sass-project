@@ -227,22 +227,6 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-@container style(--is-New:true) {
-  .main .main__content-card::after {
-    content: "🆕 New";
-  }
-  .main .main__content-card-actions {
-    box-shadow: 0 0.3125rem 0 #00a6ed;
-  }
-}
-@container style(--is-Out:true) {
-  .main .main__content-card::after {
-    content: "🚫 Sold out";
-  }
-  .main .main__content-card-actions {
-    box-shadow: 0 0.3125rem 0 rgba(255, 0, 0, 0.781);
-  }
-}
 
 .header {
   background-color: rgb(133, 129, 129);

@@ -203,22 +203,22 @@
 
   // when the state is new
 
-  @container style(--is-New:true) {
-    .main__content-card::after {
-      content: "🆕 New";
-    }
-    .main__content-card-actions {
-      box-shadow: 0 rem(5) 0 #00a6ed;
-    }
-  }
+  // @container style(--is-New:true) {
+  //   .main__content-card::after {
+  //     content: "🆕 New";
+  //   }
+  //   .main__content-card-actions {
+  //     box-shadow: 0 rem(5) 0 #00a6ed;
+  //   }
+  // }
 
-  // when the state is sold out
-  @container style(--is-Out:true) {
-    .main__content-card::after {
-      content: "🚫 Sold out";
-    }
-    .main__content-card-actions {
-      box-shadow: 0 rem(5) 0 rgba(255, 0, 0, 0.781);
-    }
-  }
+  // // when the state is sold out
+  // @container style(--is-Out:true) {
+  //   .main__content-card::after {
+  //     content: "🚫 Sold out";
+  //   }
+  //   .main__content-card-actions {
+  //     box-shadow: 0 rem(5) 0 rgba(255, 0, 0, 0.781);
+  //   }
+  // }
 }
