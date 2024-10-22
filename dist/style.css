@@ -88,6 +88,36 @@ body {
   position: relative;
   color: white;
 }
+.main__content-card:nth-child(2n)::after {
+  content: "🔥 Popular";
+}
+.main__content-card:nth-child(2n) .main__content-card-actions {
+  box-shadow: 0 0.3125rem 0 #ff6723;
+}
+.main__content-card:nth-child(3n-2)::after {
+  content: "🆕 New";
+}
+.main__content-card:nth-child(3n-2) .main__content-card-actions {
+  box-shadow: 0 0.3125rem 0 #00a6ed;
+}
+.main__content-card:nth-child(3n)::after {
+  content: "🚫 Sold out";
+}
+.main__content-card:nth-child(3n) .main__content-card-actions {
+  box-shadow: 0 0.3125rem 0 rgba(255, 0, 0, 0.781);
+}
+.main__content-card:nth-child(5)::after {
+  content: "🚫 Sold out";
+}
+.main__content-card:nth-child(5) .main__content-card-actions {
+  box-shadow: 0 0.3125rem 0 rgba(255, 0, 0, 0.781);
+}
+.main__content-card:nth-child(11)::after {
+  content: "🆕 New";
+}
+.main__content-card:nth-child(11) .main__content-card-actions {
+  box-shadow: 0 0.3125rem 0 rgba(255, 0, 0, 0.781);
+}
 .main__content-card::before {
   position: absolute;
   content: "";
@@ -196,26 +226,6 @@ body {
   font-size: 0.9375rem;
   font-weight: 600;
   cursor: pointer;
-}
-.main .main__content-card:nth-child(2n) {
-  --is-Popular: true;
-}
-.main .main__content-card:nth-child(2n-1) {
-  --is-Popular: true;
-}
-.main .main__content-card:nth-child(n) {
-  --is-Popular: true;
-}
-.main .main__content-card:nth-child(3n) {
-  --is-New: true;
-}
-@container style(--is-Popular:true) {
-  .main .main__content-card::after {
-    content: "🔥 Popular";
-  }
-  .main .main__content-card-actions {
-    box-shadow: 0 0.3125rem 0 #ff6723;
-  }
 }
 @container style(--is-New:true) {
   .main .main__content-card::after {

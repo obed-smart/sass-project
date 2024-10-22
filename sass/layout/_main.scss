@@ -6,10 +6,9 @@
   &__content {
     @include container-width;
     margin-block: rem(100);
-  
 
     display: grid;
-   grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: rem(20);
 
     @media (width <= 920px) {
@@ -23,6 +22,49 @@
     &-card {
       position: relative;
       color: $text-card-color;
+
+      &:nth-child(2n) {
+        &::after {
+          content: "🔥 Popular";
+        }
+        .main__content-card-actions {
+          box-shadow: 0 rem(5) 0 #ff6723;
+        }
+      }
+
+      &:nth-child(3n - 2) {
+        &::after {
+          content: "🆕 New";
+        }
+        .main__content-card-actions {
+          box-shadow: 0 rem(5) 0 #00a6ed;
+        }
+      }
+
+      &:nth-child(3n) {
+        &::after {
+          content: "🚫 Sold out";
+        }
+        .main__content-card-actions {
+          box-shadow: 0 rem(5) 0 rgba(255, 0, 0, 0.781);
+        }
+      }
+      &:nth-child(5) {
+        &::after {
+          content: "🚫 Sold out";
+        }
+        .main__content-card-actions {
+          box-shadow: 0 rem(5) 0 rgba(255, 0, 0, 0.781);
+        }
+      }
+      &:nth-child(11) {
+        &::after {
+          content: "🆕 New";
+        }
+        .main__content-card-actions {
+          box-shadow: 0 rem(5) 0 rgba(255, 0, 0, 0.781);
+        }
+      }
 
       &::before {
         position: absolute;
@@ -146,30 +188,18 @@
 
   // adding states to each card
 
-  .main__content-card:nth-child(2n) {
-    --is-Popular: true;
-  }
-  .main__content-card:nth-child(2n - 1) {
-    --is-Popular: true;
-  }
-  .main__content-card:nth-child(n) {
-    --is-Popular: true;
-  }
+  // .main__content-card:nth-child(2n - 1) {
+  // }
+  // .main__content-card:nth-child(n) {
+  // }
 
-  .main__content-card:nth-child(3n) {
-    --is-New: true;
-  }
+  // .main__content-card:nth-child(3n) {
+  // }
 
   // styeling the tag based on states
 
-  @container style(--is-Popular:true) {
-    .main__content-card::after {
-      content: "🔥 Popular";
-    }
-    .main__content-card-actions {
-      box-shadow: 0 rem(5) 0 #ff6723;
-    }
-  }
+  // @container style(--is-Popular:true) {
+  // }
 
   // when the state is new
 
