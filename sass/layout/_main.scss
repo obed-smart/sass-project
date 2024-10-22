@@ -6,7 +6,7 @@
   &__content {
     @include container-width;
     margin-block: rem(100);
-    // border: 5px solid;
+  
 
     display: grid;
    grid-template-columns: repeat(3,1fr);
