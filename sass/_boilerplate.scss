@@ -1,0 +1,21 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+
+}
+
+body {
+    margin: inherit; 
+    height: 100vh;
+    display: grid;
+    font-family: "Space Grotesk", sans-serif;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }

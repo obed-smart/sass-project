@@ -1,0 +1,11 @@
+@use "../component/index" as *;
+
+.header {
+  background-color: $bg-header-color;
+  @include fixed-default;
+  top: 0;
+
+  &__nav {
+    @include nav-style;
+  }
+}

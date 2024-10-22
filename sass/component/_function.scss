@@ -1,0 +1,11 @@
+@use "sass:math";
+
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + rem;
+  } @else {
+    @error "don\'t use unite when useing rem() function";
+  }
+}
+
+
