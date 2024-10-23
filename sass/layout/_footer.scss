@@ -10,7 +10,8 @@
 
 
     @media (width <=rem(700)) {
-      @include flex-default(flex, space-between, center, column)
+      @include flex-default(flex, space-between, center, column);
+      gap: rem(30);
     }
 
     &-link {
