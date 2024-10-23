@@ -4,9 +4,14 @@
   background-color: $bg-footer-color;
   @include fixed-default;
   bottom: 0;
-  
+
   &__nav {
     @include nav-style;
+
+
+    @media (width <=rem(700)) {
+      @include flex-default(flex, space-between, center, column)
+    }
 
     &-link {
       display: flex;
@@ -17,7 +22,7 @@
       & ion-icon {
         font-size: rem(25);
       }
-      
+
       & span {
         font-size: rem(16);
       }

@@ -11,11 +11,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: rem(20);
 
-    @media (width <= 920px) {
+    @media (width <= rem(920)) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (width <= 700px) {
+    @media (width <= rem(700)) {
       grid-template-columns: 1fr;
     }
 

@@ -7,10 +7,11 @@
   padding-inline: rem(30);
 }
 
-@mixin flex-default($flex, $justify, $align){
+@mixin flex-default($flex, $justify, $align, $direction:row){
   display: $flex;
   justify-content: $justify;
   align-items: $align;
+  flex-direction: $direction;
 }
 
 @mixin link-style {
